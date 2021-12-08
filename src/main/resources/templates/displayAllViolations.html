@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" th:href="@{/img/mmda-logo-1.png}" sizes="32x32" >
+
+<title>All Violations</title>
+
+</head>
+<body>
+	<div class="container">
+	
+		<br><br>
+		<h3>All Violations:</h3>
+		
+		<table class="table table-bordered">
+		
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Plate Number</th>
+					<th>Violation</th>
+					<th>Street</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			 
+			 <tbody>
+			 	<tr th:each="violation:${violations_name}"> 
+				 	 <td th:text="${violation.id}"></td>
+				 	 <td th:text="${violation.plateNo}"></td>
+				 	 <td th:text="${violation.violationEntry}"></td>
+				 	 <td th:text="${violation.street}"></td>
+				 	 <td th:text="${violation.date}"></td>
+				 	 <td th:text="${violation.time}"></td>
+				 	 <td th:text="${violation.status}"></td>
+		 	    </tr>
+			 </tbody>
+		
+		</table>
+	</div>
+</body>
+</html>
+
+

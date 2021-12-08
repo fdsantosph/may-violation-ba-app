@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Violation Ba</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/png" th:href="@{/img/mmda-logo-1.png}" sizes="32x32" >
+</head>
+
+<body>
+
+    <header th:replace="layouts::navbar"></header>
+
+    <section class="constrain">
+
+        <article class="main main-reverse">
+
+            <div class="search-text center">
+                <div class="move-closer-to-image">
+                    <h1 class="wala-search-header">May violation ba?</h1>
+
+					<form action="showViolations" method="get">
+                        <input id="text-box-id" type="text" name="plateNo" placeholder="ENTER PLATE NUMBER" 
+                            minlength="6" required autocomplete=off />
+
+                        <input id="search-box"   type="submit" class="button button-orange" value="Search Another" />
+
+                    </form>
+                       <div class="wala-result">
+	                      <b class="color-it-red" th:text="${searchedPlateNo}"></b>
+	                      <h2 class="result-wala">WALA. NO VIOLATION.</h2>
+					   </div>
+                    <!-- <b th:text="${searchedPlateNo}"></b>  -->
+                </div>
+            </div>
+
+            <div class="search-image move-closer-to-text ">
+                <img th:src="@{/img/police-02-smaller.png}" alt="MMDA Officer">
+            </div>
+
+        </article>
+
+        <footer th:replace="layouts::footer"></footer>
+
+    </section>
+
+</body>
+
+</html>

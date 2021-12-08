@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Plate Number</title>
+</head>
+<body>
+	<h1>Search for Plate No.</h1>
+	
+	<form action="displayViolations4" method="get"> 
+	
+	<!-- <form action="displayViolations4" method="get" th:object="${formData}" > -->
+	
+	<!-- <form action="displayViolations4" method="get" th:object="${formData}" >  -->
+	
+		Plate Number: <input type="text" name="plateNo" >
+		<!-- Plate Number: <input type="text"  th:field="${formData.plateNo}"  >   -->
+		
+		<br/><br/>	  
+		<input type="submit" value="Submit" />
+	
+	</form>
+
+	<!-- added for modelMap response from Controller -->
+	
+	<!-- ${msg}  -->
+	
+	<b th:text="${msg}"></b>
+	
+	
+	
+
+</body>
+</html>

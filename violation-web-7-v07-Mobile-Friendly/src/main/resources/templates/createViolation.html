@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Violation</title>
+</head>
+<body>
+
+	<h2>Hello World</h2>
+
+	 
+
+	<form action="saveVio" method="post">
+	
+		Id: 		<input type="text" 		name="id" />
+		Plate No.: 	<input type="text" 		name="plateNo" />
+		Violation: 	<input type="text" 		name="violationEntry" />
+		Street: 	<input type="text" 		name="street" /> 		<br><br>
+		Date: 		<input type="text" 		name="date" />
+		Time: 		<input type="text" 		name="time" />
+		Status: 	<input type="text" 		name="status" /> 		<br><br>
+					<input type="submit" 	value="Submit" />
+	
+	</form>
+
+	
+
+	<!--  ${msg} -->
+	<br/><br/>
+	<a href="displayViolations">View All</a>
+
+</body>
+</html>

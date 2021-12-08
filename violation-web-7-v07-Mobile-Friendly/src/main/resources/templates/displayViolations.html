@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	 
+	<link rel="stylesheet" href="style.css">
+
+
+<title>Insert title here</title>
+
+<style>
+
+	
+/* media queries */
+@media screen and (max-width: 639px) {
+    .product {
+        display: block;
+        padding: 30px 0;
+    }
+    .product:first-child {
+        padding-top: 0;
+    }
+    .product h1, .content h1 {
+        font-size: 34px;
+    }
+    .product h2, .content h2 {
+        font-size: 16px;
+    }
+    .product p, .content p {
+        font-size: 16px;
+    }
+    
+    /* IB-Media */
+    
+    /*
+    .title{
+    	text-align: left;
+    }
+    */
+    
+    body{
+    	background-color:white;
+    }
+    
+    
+    #violation-id{
+    	display: none;
+    }
+    
+    #violation-plateNo{
+    	display: none;
+    }
+    
+    #violation-violationEntry{
+    	color: red;
+    	padding-top:8px;
+    }
+    
+    
+    #violation-status{
+    	display: none;
+    }
+    
+    
+    
+    .smart-table thead  {
+    	display: none;
+    }
+    
+    .smart-table tr,
+    .smart-table td {
+    	display: block;
+    	
+    }
+    
+    .smart-table tr:not(:last-child) {
+    
+    	/*
+    	border-bottom: 5px solid #5ca0c3;
+    	*/
+    	
+    	/*
+    	border-bottom: 5px solid white;
+    	padding-bottom: 5px;
+    	
+    	*/
+    	
+    	margin-bottom: 8px;
+    	
+    }
+    
+    .smart-table td {
+    	padding-left: 3%;
+    	position: relative;
+    	padding: 0px;
+    	text-align: center;
+    }
+    
+    
+    .smart-table {
+    }
+    
+    
+}
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+	<div class="container">
+	
+		<br><br>
+		<h3>Violations:</h3>
+		<!-- <hr>  -->
+		<!-- <table border="1"> Note:Before Bootstrap  -->
+		
+		<table class="table table-bordered table-striped smart-table">
+		
+		<!--  
+		<table class="table table-bordered smart-table">
+		 -->
+		
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Plate Number</th>
+					<th>Violation</th>
+					<th>Street</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			
+			<!-- </c:forEach> -->
+			 
+			 <tbody>
+			 	<tr th:each="violation : ${violations}"> 
+				 	 <td th:text="${violation.id}" id="violation-id"></td>
+				 	 <td th:text="${violation.plateNo}" id="violation-plateNo"  ></td>
+				 	 <td th:text="${violation.violationEntry}" id="violation-violationEntry"  ></td>
+				 	 <td th:text="${violation.street}"></td>
+				 	 <td th:text="${violation.date}"></td>
+				 	 <td th:text="${violation.time}" id="violation-time"  ></td>
+				 	 <td th:text="${violation.status}" id="violation-status"  ></td>
+		 	    </tr>
+			 </tbody>
+		
+		</table>
+		
+		<br/><br/>
+		<!-- 
+		<a href="showCreate">Add Violation</a>
+		 -->
+		<a href="searchPlateNo">Search another Plate Number</a>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ################################################### -->
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>May violation ka ba?</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        
+        
+        <link rel="stylesheet"   th:href="@{/css/style.css}">
+        
+        <style>
+         </style>
+
+<title>Search Plate Number</title>
+</head>
+<body>
+
+	       <header class="header">
+            <div class="constrain">
+                <h1>
+                    <a href="/">
+                        <span>Orange</span>
+                        <!-- <img src="/../static/img/orange.png" alt="Orange">   -->
+                        <!-- <img th:src="@{/img/orange.png}" alt="Orange">   -->
+                        <img th:src="@{/img/mmda-logo-jpeg.jpg}" alt="MMDA Logo"  >
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">Go back to Main Site</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <hr>
+	
+	<section class="constrain">
+	
+	
+	<!-- added for modelMap response from Controller -->
+	<!-- ${msg}  -->
+	<!-- <b th:text="${msg}"></b>  -->
+	
+		<!-- 
+        <section class="constrain">
+         -->
+
+            <article class="product product-reverse">
+                <div class="product-text">
+                    <h1>May violation ka ba?</h1>
+                    <!-- 
+                    <h2>From $2,699</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur a totam officia architecto dolor quam libero molestiae.</p>
+                     -->
+                    
+				
+				<!--in your HTML-->
+				<!-- <input id="textboxid" ...>   -->
+                    
+                    
+				                    	
+					<form action="displayViolations4" method="get"> 
+						<!-- <input type="text" name="plateNo"  style="height:50px;font-size:14pt;"   placeholder="Enter Plate Number"/>  -->
+						<input id="textboxid"  type="text" name="plateNo"    placeholder="Enter Plate Number"/>
+						<!-- <br/><br/>  -->	  
+						<input id="search-box" type="submit" class="button"   value="SEARCH"/>
+					
+					</form>
+
+                    
+                    <!-- 
+                    <nav class="product-nav">
+                        <ul>
+                            <li><a href="#" class="button button-orange">Buy</a></li>
+                            <li><a href="#" class="button button-white">Learn more &gt;</a></li>
+                        </ul>
+                    </nav>
+                     -->
+                    
+                </div>
+                <div class="product-image">
+                    <!-- <img src="/assets/img/obook.png" alt="oBook" width="400">   -->
+                    <img th:src="@{/img/police-01.png}" alt="MMDA Logo"  >
+                </div>
+            </article>
+            
+            
+        </section>
+	
+	
+	
+
+</body>
+</html>

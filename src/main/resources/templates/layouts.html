@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Violation Ba</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400, 700" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/png" th:href="@{/img/mmda-logo-1.png}" sizes="32x32" >
+</head>
+
+<header class="header" th:fragment="navbar">
+    <div class="constrain">
+        <h1>
+        	<!-- 
+            <a href="https://mmda.gov.ph/" target="_blank"> <img th:src="@{/img/mmda-logo-1.png}" alt="MMDA Logo"></a>
+            -->
+            <a href="https://mmda.gov.ph/" target="_blank"> <img th:src="@{/img/mmda-logo-2.png}" alt="MMDA Logo"></a>
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="https://mmda.gov.ph" target="_blank" >Home</a></li>
+                <li><a href="https://www.lbp-eservices.com/egps/portal/Fields.jsp" target="_blank" >E-Payment</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<footer th:fragment="footer">
+    <div class="footer-middle">
+        <p>#MayViolationBa</p>
+    </div>
+    <div class="footer-bottom">
+    
+    	<!-- 
+        <p>Data from MMDA - No Contact Apprehension Program as of MM/DD/YYYY | DISCLAIMER</p>
+         -->
+        <p class="contact_details">Data from MMDA - No Contact Apprehension Program as of <span th:text="${new_date}"></span> | DISCLAIMER</p>
+        <p class="contact_details">For payment details call MMDA Redemption Center at 8882-4154 to 77 local 1164 or 1165, or MMDA Hotline 136.</p>
+        
+    </div>
+    <div class="inline-images-icons">
+        <a href="https://twitter.com/MMDA"><img src="img/twitter-square-interlaced2.png" class="tw" /></a> 
+        <a href="https://www.facebook.com/MMDAPH/"><img src="img/fb-square-interlaced2.png" class="fb" /></a>
+    </div>
+</footer>
+
+</html>
